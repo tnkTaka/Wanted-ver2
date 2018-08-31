@@ -1,6 +1,6 @@
 package model
 
-import "github.com/Wanted-release/middleware"
+import "github.com/Wanted-ver2/middleware"
 
 // Studentテーブルの構造体
 type Student struct {

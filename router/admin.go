@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/Wanted-release/controller"
+	"github.com/Wanted-ver2/controller"
 )
 
 func adminRouter(admin *gin.RouterGroup) {

@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/Wanted-release/controller"
+	"github.com/Wanted-ver2/controller"
 )
 
 func questionRouter(question *gin.RouterGroup) {

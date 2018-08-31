@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"fmt"
 	"net/http"
-	"github.com/Wanted-release/model"
+	"github.com/Wanted-ver2/model"
 )
 
 func PostTeacher(c *gin.Context) {

@@ -5,7 +5,7 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/Wanted-release/model"
+	"github.com/Wanted-ver2/model"
 )
 
 func GetQuestion(c *gin.Context) {
