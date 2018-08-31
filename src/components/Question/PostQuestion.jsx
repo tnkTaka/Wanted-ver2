@@ -199,11 +199,12 @@ class PostQuestion extends React.Component{
         //Ajaxでのpost処理
         axios.post('/question/post',params).then(          
             (r)=>{
-                if(r.response.status === 200){
-                    let question_id = r.questionId;
-                    localStorage.setItem('question_id',question_id);
-                    this.props.history.push('/question/detail');
-                }
+                console.log(11);
+                console.log(r)
+                let question_id = r.data.questionId;
+                localStorage.setItem('question_id',question_id);
+                console.log(localStorage.getItem('question_id'));
+                this.props.history.push('/question/detail');
             },
 
             (r)=>{
