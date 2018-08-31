@@ -50,7 +50,7 @@ func CreateStudent(studentName, studentClass, studentLoginId, studentLoginPasswo
 	student.StudentLoginId = studentLoginId
 	student.StudentLoginPassword = studentLoginPassword
 
-	db.Create(&student)
+	db.Exec("INSERT INTO `students`(`student_name`, `student_grade`, `student_class`, `student_class_number`, `student_login_id`, `student_login_password`) VALUES (?,?,?,?,?,?)",student.StudentName, student.StudentGrade, student.StudentClass, student.StudentClassNumber, student.StudentLoginId, student.StudentLoginPassword)
 	db.Close()
 	return true
 }

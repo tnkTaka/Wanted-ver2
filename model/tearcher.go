@@ -19,8 +19,8 @@ func CreateTeacher(teacherName, teacherPassword, teacherHomeroom string, teacher
 	teacher.TeacherPassword = teacherPassword
 	teacher.TeacherHomeroom = teacherHomeroom
 	teacher.TeacherGradeHomeroom = teacherGradeHomeroom
-	teacher.DeleteFlg = 1
-	db.Create(&teacher)
+
+	db.Exec("INSERT INTO `teachers`(`teacher_name`, `teacher_grade_homeroom`, `teacher_homeroom`, `teacher_password`) VALUES (?,?,?,?)", teacher.TeacherName, teacher.TeacherGradeHomeroom, teacher.TeacherHomeroom, teacher.TeacherPassword)
 
 	defer db.Close()
 	return true
