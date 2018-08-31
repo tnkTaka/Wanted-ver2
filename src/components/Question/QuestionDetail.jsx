@@ -133,9 +133,9 @@ class QuestionList extends React.Component{
     }
 
     componentWillMount(){
-        const question_id = localStorage.getItem('question_id');
-        const student_name = localStorage.getItem('student_name');
-        const student_id = localStorage.getItem('student_id');
+        let question_id = localStorage.getItem('question_id');
+        let student_name = localStorage.getItem('student_name');
+        let student_id = localStorage.getItem('student_id');
 
         this.setState({
             question_id:question_id,
