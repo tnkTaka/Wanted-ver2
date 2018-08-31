@@ -1,15 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-env = require(path.join(__dirname, '/getenv.js'));
 
 module.exports = {
   mode: 'development', // 追加
-  entry: {
-    'app': [
-      path.resolve(__dirname, 'src/components/app.jsx'),
-      //path.resolve(__dirname, 'src/components/user/UserComponent.jsx'),
-      //path.resolve(__dirname, 'src/components/parts/TabView.jsx')
-    ]
+  entry: {  
+      app:[path.resolve(__dirname, 'src/components/app.jsx')]
   },
   output: {
     filename: 'bundle.js',
@@ -25,9 +20,6 @@ module.exports = {
       },
     ]
   },
-  plugins: [
-    new webpack.DefinePlugin(env.getEnvs())
-  ],
   resolve: {
     extensions: ['.js', '.jsx'],
   },

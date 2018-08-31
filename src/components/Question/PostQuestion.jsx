@@ -200,7 +200,7 @@ class PostQuestion extends React.Component{
         axios.post('/question/post',params).then(          
             (r)=>{
                 if(r.response.status === 200){
-                    let question_id = res.questionId;
+                    let question_id = r.questionId;
                     localStorage.setItem('question_id',question_id);
                     this.props.history.push('/question/detail');
                 }
