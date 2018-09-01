@@ -4,5 +4,5 @@ import "github.com/Wanted-ver2/router"
 
 func main() {
 	r := router.GetRouter()
-	r.Run(":80")
+	r.Run(":5000")
 }

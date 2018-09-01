@@ -23,7 +23,7 @@ func PostStudent(c *gin.Context) {
 	studentClass := c.PostForm("student_class")
 	studentClassNumber := c.PostForm("student_class_number")
 	studentLoginPassword := c.PostForm("student_login_password")
-	studentLoginId := studentClass + studentClassNumber
+	studentLoginId := strconv.Itoa(studentGrade) + studentClass + studentClassNumber
 	intStudentClassNumber, _ := strconv.Atoi(studentClassNumber)
 
 	post := model.CreateStudent(studentName, studentClass, studentLoginId, studentLoginPassword, intStudentClassNumber, studentGrade)
